@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripCraft | Account Activation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3f5f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2b2b2b;
+    }
+
+    .email-wrapper {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .email-header {
+      background: linear-gradient(135deg, #ff6b35, #f54927);
+      color: #ffffff;
+      padding: 36px 24px;
+      text-align: center;
+    }
+
+    .email-header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .email-body {
+      padding: 32px 28px;
+    }
+
+    .email-body h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: #f54927;
+      text-align: center;
+      margin: 28px 0;
+      letter-spacing: 2px;
+    }
+
+    .email-body p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 16px 0;
+    }
+
+    .email-footer {
+      background-color: #fafafa;
+      padding: 24px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+
+    a {
+      color: #f54927;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      background-color: #f54927;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e33c1f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="email-header">
+      <h1>Welcome to TripCraft 🌍</h1>
+    </div>
+    <div class="email-body">
+      <p>Hey <strong>
+          <%= name %>
+        </strong>,</p>
+      <p>
+        Thanks for joining <strong>TripCraft</strong> — your gateway to exploring the world!
+        To activate your account, please use the following one-time verification code:
+      </p>
+
+      <h2>
+        <%= otp %>
+      </h2>
+
+      <p>
+        This code is valid for the next <strong>5 minutes</strong>.
+        Enter it on the activation page to complete your registration.
+      </p>
+
+      <p>
+        Didn’t sign up for TripCraft? You can safely ignore this email.
+      </p>
+    </div>
+    <div class="email-footer">
+      <p>
+        Need help? Reach out to us at
+        <a href="mailto:support@tripcraft.com">support@tripcraft.com</a>
+      </p>
+      <p>© <%= new Date().getFullYear() %> TripCraft. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+
+</html>
